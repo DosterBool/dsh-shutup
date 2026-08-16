@@ -1,0 +1,46 @@
+{
+  "name": "dsh-shutup",
+  "version": "0.1.0",
+  "description": "Shutup · 打断提示：模型思考/输出时按下快捷键立即打断当前生成并弹出输入框，载入你的修正提示（steer 注入当前回合），像 Claude Code 的 Tell Claude。快捷键可在 设置 → 通用 中录制修改。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "interrupt",
+    "steering",
+    "tell-claude",
+    "shortcut",
+    "web-ui",
+    "cordis",
+    "react"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime"
+      ],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-client-runtime": "^0.1.0-rc.6",
+    "react": "^18.2.0"
+  }
+}

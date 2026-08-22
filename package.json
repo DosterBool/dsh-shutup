@@ -1,6 +1,6 @@
 {
   "name": "dsh-shutup",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Shutup · 打断提示：模型思考/输出时按下快捷键立即打断当前生成并弹出输入框，载入你的修正提示（steer 注入当前回合），像 Claude Code 的 Tell Claude。快捷键可在 设置 → 通用 中录制修改。",
   "keywords": [
     "dsh",
